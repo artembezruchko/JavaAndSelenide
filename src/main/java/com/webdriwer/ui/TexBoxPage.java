@@ -8,7 +8,7 @@ import static com.codeborne.selenide.Selenide.$;
 public class TexBoxPage {
 
     public static TexBoxPage open() {
-        Selenide.open("https://demoqa.com/text-box");
+        Selenide.open("/text-box");
         return new TexBoxPage( );
     }
 
