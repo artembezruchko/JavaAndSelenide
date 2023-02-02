@@ -8,7 +8,7 @@ import static com.codeborne.selenide.Selenide.$;
 public class CheckBoxPage {
     public static CheckBoxPage open() {
         Selenide.open("/checkbox");
-        return new CheckBoxPage( );
+        return new CheckBoxPage();
     }
 
     public CheckBoxPage clickHomeCheckBox () {

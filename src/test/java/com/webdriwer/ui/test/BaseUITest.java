@@ -16,6 +16,14 @@ public class BaseUITest {
         return Selenide.page(pageClass);
     }
 
+    public void waitSeconds(int second) {
+        try {
+            Thread.sleep(second * 1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
     @AfterMethod
     public void cleanCookies() {
         Selenide.clearBrowserCookies();

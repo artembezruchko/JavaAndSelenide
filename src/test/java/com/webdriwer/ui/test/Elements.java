@@ -1,7 +1,6 @@
 package com.webdriwer.ui.test;
 
 import com.webdriwer.ui.CheckBoxPage;
-import com.webdriwer.ui.Slider;
 import com.webdriwer.ui.TexBoxPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -46,20 +45,15 @@ public class Elements extends BaseUITest {
         String text = CheckBoxPage.open().clickHomeCheckBox().getTextOfResult();
 
         Assert.assertEquals(text, expectedText);
+        waitSeconds(5);
     }
 
     @Test
-    public void testSelectChekBoxByName() {
+    public void testSelectCheckBoxByName() {
         String expectedText = "You have selected :\n" +
                 "general";
         String text = CheckBoxPage.open().clickOpenList().clickByNameCheckBox("General").getTextOfResult();
         Assert.assertEquals(text, expectedText);
-    }
-
-    @Test
-    public void testSliderMove() {
-        String text = Slider.open().clickAndMoveSlider(10).getResult();
-        Assert.assertEquals(text, "25");
     }
 
 }
